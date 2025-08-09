@@ -1,0 +1,493 @@
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------------------- Navbar ------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    font-size: 2.5vh;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    font-size: 1.04rem;
+    color: rgb(122, 122, 192);
+    cursor: pointer;
+}
+.left {
+    display: flex;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-items: center;
+    gap: 15px;
+}
+.logo_img {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+.logo_text {
+    vertical-align: middle;
+}
+/* 🔽 Add this for smooth scroll and anchor padding */
+html {
+    scroll-padding-top: 80px;
+    /* Prevents content being hidden under navbar */
+    scroll-behavior: smooth;
+}
+/* ------------------- First Section ------------------- */
+
+.firstSection {
+    height: 100vh;
+
+    background: #0f0f0f;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+    animation: slideIn 2s ease forwards;
+}
+
+.firstSection>div {
+    width: 30%;
+}
+
+.leftSection {
+    font-size: 3rem;
+}
+
+.rightSection img {
+    width: 80%;
+}
+
+.purple {
+    color: blueviolet;
+}
+
+.element {
+    color: blueviolet;
+}
+
+/* ------------------- Second Section (About) ------------------- */
+
+.secondSection {
+    padding-top: 30px;
+    display: flex;
+    box-sizing: border-box;
+    border: 3px solid #4682B4;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+    margin: 150px;
+}
+
+.secondSection img {
+    width: 400px;
+    height: 604px;
+    margin: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 4px solid #1970b7;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+}
+
+/*.secondSection img {
+    width: 400px;
+    height: 604px;
+    margin: 15px;
+    border-radius: 10px;
+    aspect-ratio: 1661 / 2509;
+}*/
+h1 {
+    text-align: center;
+    font-size: 8vh;
+    color: #6A5ACD;
+}
+
+.about_content {
+    margin: 15px;
+    padding: 15px;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+/* ------------------- Third Section (Skills) ------------------- */
+
+.thirdSection {
+    padding: 60px 10%;
+    background-color: #0f0f0f;
+    text-align: center;
+    color: #ffffff;
+}
+
+.skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skillBox {
+    background: linear-gradient(135deg, #1e1e3f, #322e5d);
+    padding: 25px 30px;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    border: 2px solid blueviolet;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+    margin-top: 20px;
+}
+
+.skillBox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+    cursor: pointer;
+}
+
+.skillBox i {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+/* ------------------- Contact Section ------------------- */
+
+.contactSection {
+    padding: 60px 10%;
+    background-color: #0f0f0f;
+    text-align: center;
+    color: white;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: blueviolet;
+    margin-bottom: 40px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+    background-color: #1e1e3f;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.6);
+    border-color: #9d4edd;
+}
+
+.contactForm button {
+    padding: 12px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contactForm button:hover {
+    background-color: #9d4edd;
+    transform: scale(1.05);
+}
+
+.socialLinks {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.socialLinks a {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLinks a:hover {
+    color: blueviolet;
+    transform: scale(1.2);
+}
+
+/* ------------------- Footer ------------------- */
+
+.site-footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    margin-top: 60px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.site-footer a.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #9d4edd;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.site-footer a.back-to-top:hover {
+    color: #d0aaff;
+    transform: scale(1.1);
+}
+
+/* ------------------- Responsive Design ------------------- */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 60px 10px;
+    }
+
+    .firstSection>div {
+        width: 90%;
+    }
+
+    .leftSection {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .rightSection img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about_content {
+        font-size: 1.1rem;
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .skillsGrid {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .skillBox {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .skillBox i {
+        font-size: 3.5rem;
+    }
+
+    .contactForm {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .contactForm input,
+    .contactForm textarea {
+        font-size: 0.95rem;
+    }
+
+    .contactForm button {
+        font-size: 1rem;
+    }
+
+    .socialLinks {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .socialLinks a {
+        font-size: 1.7rem;
+    }
+
+    .site-footer {
+        font-size: 0.85rem;
+        padding: 20px 10px;
+    }
+
+    .site-footer a.back-to-top {
+        font-size: 0.95rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(110vh);
+    }
+
+    to {
+        transform: translateY(-10vh);
+    }
+}
+#educationTimeline{
+    display: grid;
+}
+.edu{
+    height:200px;
+    width:500px;
+    border:2px solid blueviolet;
+    background-color: #1e1e3f;
+    border-radius:10px;
+    padding:15px;
+    margin:20px;
+    display:grid;
+    /* grid-template-rows: 0px; */
+    /* align-items: center;*/
+    text-align: left; 
+    font-size: 25px;
+    /* display: flex; */
+    
+}
+@keyframes slideRight{
+    from{
+        transform: translateX(0);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(50%);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+.edu2{
+    margin-left: auto;
+    margin-right: 220px;
+    
+}
+.show.edu2{
+    animation:slideLeft 2s ease-in-out forwards;
+}
+.show.edu1,.show.edu3{
+    animation:slideRight 2s ease-in-out forwards;
+}
+.edu1,.edu3{
+    margin-left: 220px;
+    
+}
+.edu:hover{
+    box-shadow:3px 3px 10px #4169E1;
+    height:210px;
+    width:510px;
+}
+.hidden{
+    opacity:0;
+    transform: translateX(100%);
+}
+.first{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    font-size: 20px;
+}
+.first img{
+    height:30px;
+    width:30px;
+}
+.second,.third{
+    font-size: 20px;
+    color:#DCDCDC;
+}
+.second img{
+    height: 15px;
+    width:15px;
+}
+.third img{
+    height: 20px;
+    width:20px;
+}
