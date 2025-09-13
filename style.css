@@ -3,7 +3,9 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +44,7 @@ nav ul li a {
     text-decoration: none;
     color: white;
 }
-nav ul li a:hover {
+nav ul li a:hover{
     font-size: 1.04rem;
     color: rgb(122, 122, 192);
     cursor: pointer;
@@ -63,17 +65,18 @@ nav ul li a:hover {
 .logo_text {
     vertical-align: middle;
 }
-/* 🔽 Add this for smooth scroll and anchor padding */
 html {
     scroll-padding-top: 80px;
-    /* Prevents content being hidden under navbar */
     scroll-behavior: smooth;
 }
+.right ul li i{
+    padding-right: 4px;
+}
+
 /* ------------------- First Section ------------------- */
 
-.firstSection {
+.firstSection{
     height: 100vh;
-
     background: #0f0f0f;
     position: relative;
     z-index: 10;
@@ -86,13 +89,12 @@ html {
 }
 
 .firstSection>div {
-    width: 30%;
+    width: 40%;
 }
 
 .leftSection {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
-
 .rightSection img {
     width: 80%;
 }
@@ -103,6 +105,10 @@ html {
 
 .element {
     color: blueviolet;
+    font-size: 2rem;
+}
+.leftSectionScript{
+    padding-left: 0%
 }
 
 /* ------------------- Second Section (About) ------------------- */
@@ -124,19 +130,11 @@ html {
     margin: 15px;
     border-radius: 10px;
     box-sizing: border-box;
-    border: 4px solid #1970b7;
+    /* border: 4px solid #1970b7; */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
 }
-
-/*.secondSection img {
-    width: 400px;
-    height: 604px;
-    margin: 15px;
-    border-radius: 10px;
-    aspect-ratio: 1661 / 2509;
-}*/
 h1 {
     text-align: center;
     font-size: 8vh;
@@ -195,19 +193,12 @@ h1 {
 
 /* ------------------- Contact Section ------------------- */
 
-.contactSection {
+.contactSection{
     padding: 60px 10%;
     background-color: #0f0f0f;
     text-align: center;
     color: white;
 }
-
-.sectionTitle {
-    font-size: 2.5rem;
-    color: blueviolet;
-    margin-bottom: 40px;
-}
-
 .contactForm {
     display: flex;
     flex-direction: column;
@@ -215,7 +206,6 @@ h1 {
     max-width: 600px;
     margin: 40px auto;
 }
-
 .contactForm input,
 .contactForm textarea {
     background-color: #1e1e3f;
@@ -249,25 +239,23 @@ h1 {
     background-color: #9d4edd;
     transform: scale(1.05);
 }
-
-.socialLinks {
-    margin-top: 30px;
+.socialLinks ul {
     display: flex;
     justify-content: center;
-    gap: 30px;
 }
-
-.socialLinks a {
+.socialLinks ul li {
+    list-style: none;
+    margin: 0 23px;
+    font-size: 4.5vh;
+}
+.socialLinks ul li a {
     color: white;
-    font-size: 2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
-
-.socialLinks a:hover {
-    color: blueviolet;
-    transform: scale(1.2);
+.socialLinks ul li a:hover{
+    color: rgb(122, 122, 192);
+    cursor: pointer;
 }
-
 /* ------------------- Footer ------------------- */
 
 .site-footer {
@@ -378,14 +366,14 @@ h1 {
         font-size: 1rem;
     }
 
-    .socialLinks {
+    /* .socialLinks {
         flex-wrap: wrap;
         gap: 20px;
     }
 
     .socialLinks a {
         font-size: 1.7rem;
-    }
+    } */
 
     .site-footer {
         font-size: 0.85rem;
@@ -406,6 +394,7 @@ h1 {
         transform: translateY(-10vh);
     }
 }
+/* education timeline */
 #educationTimeline{
     display: grid;
 }
