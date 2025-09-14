@@ -109,7 +109,24 @@ html {
 .leftSectionScript{
     padding-left: 0%
 }
+.leftSectionButton button{
+    margin-top: 100px;
+    padding:12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size:20px;
+    background: linear-gradient(135deg, #8a2be2, #6a5acd, #483d8b); 
+    transition: 0.4s ease;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+    border:none;
+    color:white;
+}
+.leftSectionButton button:hover {
+  background:linear-gradient(135deg, #6a5acd, #8a2be2, #9370db);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.9);
+  font-size:22px;
 
+}
 /* ------------------- Second Section (About) ------------------- */
 
 .secondSection {
@@ -364,16 +381,6 @@ h1 {
     .contactForm button {
         font-size: 1rem;
     }
-
-    /* .socialLinks {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .socialLinks a {
-        font-size: 1.7rem;
-    } */
-
     .site-footer {
         font-size: 0.85rem;
         padding: 20px 10px;
