@@ -21,3 +21,9 @@
         });
 const hidden=document.querySelectorAll('.hidden');
 hidden.forEach((el)=>observer.observe(el));
+const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".right ul");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });

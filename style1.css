@@ -1,4 +1,3 @@
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
@@ -17,7 +16,6 @@ body {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
-/* ------------------- Navbar ------------------- */
 
 nav {
     display: flex;
@@ -64,10 +62,6 @@ nav ul li a:hover{
 .logo_text {
     vertical-align: middle;
 }
-html {
-    scroll-padding-top: 80px;
-    scroll-behavior: smooth;
-}
 .right ul li i{
     padding-right: 4px;
 }
@@ -78,36 +72,8 @@ html {
   color: white;
 }
 
-@media (max-width: 768px) {
-  nav {
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-
-  .right ul {
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    position: absolute;
-    top: 80px; 
-    right: 0;
-    width: 220px;
-    padding: 20px;
-  }
-
-  .right ul.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* ------------------- First Section ------------------- */
-
 .firstSection{
-    height: 100vh;
+    min-height: 90vh;
     background: #0f0f0f;
     position: relative;
     z-index: 10;
@@ -115,8 +81,7 @@ html {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 80px 0;
-    animation: slideIn 2s ease forwards;
+    margin-top: 80px;
 }
 
 .firstSection>div {
@@ -159,51 +124,47 @@ html {
   font-size:22px;
 
 }
-/* ------------------- Second Section (About) ------------------- */
 
 .secondSection {
     padding-top: 30px;
     display: flex;
+    align-items: center;
+    gap: 30px;
     box-sizing: border-box;
     border: 3px solid #4682B4;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
-    margin: 150px;
+    margin: 100px;
+    padding: 30px;
 }
 
 .secondSection img {
-    width: 400px;
-    height: 604px;
-    margin: 15px;
+    width: 350px;
+    height: auto;
+    margin: 0;
     border-radius: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    text-align: center;
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
 }
 h1 {
     text-align: center;
-    font-size: 8vh;
+    font-size: 3.5rem;
     color: #6A5ACD;
+    margin-bottom: 20px;
 }
 
 .about_content {
-    margin: 15px;
-    padding: 15px;
-    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
     text-align: left;
 }
-
-
-/* ------------------- Third Section (Skills) -------------------*/
 
 .thirdSection {
     padding: 60px 10%;
     background-color: #0f0f0f;
     text-align: center;
     color: #ffffff;
-} 
+}
 
 .skillsGrid {
     display: flex;
@@ -239,7 +200,57 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* ------------------- Contact Section ------------------- */
+#educationTimeline {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edu{
+    height: auto;
+    width: 90%;
+    max-width: 600px;
+    border:2px solid blueviolet;
+    background-color: #1e1e3f;
+    border-radius:10px;
+    padding: 20px;
+    margin:20px;
+    text-align: left; 
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.edu:hover{
+    box-shadow: 0 0 20px #4169E1;
+    transform: scale(1.02);
+}
+.hidden{
+    opacity:0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(20px);
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.first{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    font-size: 1.1rem;
+}
+.first img{
+    height:30px;
+    width:30px;
+}
+.second,.third{
+    font-size: 1rem;
+    color:#DCDCDC;
+}
+.second img, .third img {
+    height: 18px;
+    width: 18px;
+    margin-right: 8px;
+}
 
 .contactSection{
     padding: 60px 10%;
@@ -304,7 +315,6 @@ h1 {
     color: rgb(122, 122, 192);
     cursor: pointer;
 }
-/* ------------------- Footer ------------------- */
 
 .site-footer {
     background-color: #111;
@@ -335,187 +345,122 @@ h1 {
     transform: scale(1.1);
 }
 
-/* ------------------- Responsive Design ------------------- */
-
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-        text-align: center;
+        justify-content: space-between;
+        padding: 0 20px;
     }
 
-    nav ul {
+    .right ul {
+        display: none;
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
+        background-color: black;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 220px;
+        padding: 20px;
+        border-radius: 0 0 0 10px;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .right ul.active {
+        display: flex;
     }
 
     nav ul li {
         margin: 10px 0;
     }
 
+    .hamburger {
+        display: block;
+    }
+
     .firstSection {
         flex-direction: column;
-        align-items: center;
+        height: auto;
+        padding: 40px 20px;
+        margin-top: 80px;
         text-align: center;
-        margin: 60px 10px;
     }
 
     .firstSection>div {
-        width: 90%;
+        width: 100%;
     }
 
     .leftSection {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        order: 2;
+    }
+
+    .rightSection {
+        order: 1;
         margin-bottom: 20px;
     }
 
     .rightSection img {
-        width: 100%;
-        max-width: 350px;
+        width: 70%;
+        max-width: 300px;
     }
 
-    .about_content {
-        font-size: 1.1rem;
-        padding: 20px 10px;
+    .leftSectionButton button {
+        margin-top: 40px;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .skillsGrid {
+    .secondSection {
         flex-direction: column;
-        gap: 25px;
-    }
-
-    .skillBox {
-        width: 80%;
-        height: auto;
+        align-items: center;
+        margin: 60px 20px;
         padding: 20px;
     }
 
+    .secondSection img {
+        width: 80%;
+        max-width: 280px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .about_content {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .thirdSection {
+        padding: 60px 20px;
+    }
+
+    .skillsGrid {
+        gap: 15px;
+    }
+
+    .skillBox {
+        width: calc(50% - 10px);
+        height: auto;
+        padding: 20px 15px;
+    }
+
     .skillBox i {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+    
+    #educationTimeline {
+        padding: 0 20px;
     }
 
-    .contactForm {
-        width: 90%;
-        padding: 0 10px;
-    }
-
-    .contactForm input,
-    .contactForm textarea {
-        font-size: 0.95rem;
-    }
-
-    .contactForm button {
+    .edu {
+        width: 100%;
+        margin: 15px 0;
         font-size: 1rem;
     }
-    .site-footer {
-        font-size: 0.85rem;
-        padding: 20px 10px;
+    
+    .contactSection {
+        padding: 60px 20px;
     }
 
-    .site-footer a.back-to-top {
-        font-size: 0.95rem;
+    .socialLinks ul li {
+        margin: 0 15px;
+        font-size: 1.8rem;
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(110vh);
-    }
-
-    to {
-        transform: translateY(-10vh);
-    }
-}
-/* education timeline */
-#educationTimeline{
-    display: grid;
-}
-.edu{
-    /* for responsive design %used for height and width */
-    height:200px;
-    width:500px;
-    border:2px solid blueviolet;
-    background-color: #1e1e3f;
-    border-radius:10px;
-    padding:15px;
-    margin:20px;
-    display:grid;
-    /* grid-template-rows: 0px; */
-    /* align-items: center;*/
-    text-align: left; 
-    font-size: 25px;
-    /* display: flex; */
-    
-}
-@keyframes slideRight{
-    from{
-        transform: translateX(0);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(50%);
-        opacity: 1;
-    }
-}
-@keyframes slideLeft{
-    from{
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(-50%);
-        opacity: 1;
-    }
-}
-.edu2{
-    margin-left: auto;
-    margin-right: 220px;
-    
-}
-.show.edu2{
-    animation:slideLeft 2s ease-in-out forwards;
-}
-.show.edu1,.show.edu3{
-    animation:slideRight 2s ease-in-out forwards;
-}
-.edu1,.edu3{
-    margin-left: 220px;
-    
-}
-.edu:hover{
-    box-shadow:3px 3px 10px #4169E1;
-    height:210px;
-    width:510px;
-}
-.hidden{
-    opacity:0;
-    transform: translateX(100%);
-}
-.first{
-    display: flex;
-    align-items: center;
-    gap:8px;
-    font-size: 20px;
-}
-.first img{
-    height:30px;
-    width:30px;
-}
-.second,.third{
-    font-size: 20px;
-    color:#DCDCDC;
-}
-.second img{
-    height: 15px;
-    width:15px;
-}
-.third img{
-    height: 20px;
-    width:20px;
-}
