@@ -61,9 +61,10 @@ nav ul li a:hover{
 }
 .logo_text {
     vertical-align: middle;
+    font-size: 0.8rem;
 }
 .right ul li i{
-    padding-right: 4px;
+    padding-right: 0.6em;
 }
 .hamburger {
   display: none;
